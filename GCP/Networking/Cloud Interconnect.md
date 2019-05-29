@@ -2,10 +2,10 @@
 
 [Google Cloud Interconnect](https://cloud.google.com/interconnect/) provides options to connect your networks together using Dedicated Interconnect, Partner Interconnect, IPsec VPN, Direct Peering, or Carrier Peering.
 
-|      | Dedicated              |         | Shared               |
-|      |------------------------|---------|----------------------|
-|Layer3| Direct Peering         |Cloud VPN| Carrier Peering      |
-|Layer2| Dedicated Interconnect |         | Partner Interconnect |
+|        | Dedicated              |           | Shared               |
+|--------|------------------------|-----------|----------------------|
+| Layer3 | Direct Peering         | Cloud VPN | Carrier Peering      |
+| Layer2 | Dedicated Interconnect |           | Partner Interconnect |
 
 Excluding IPsec VPN, by peering with Google you get the benefits of low latency, high throughput connections. This enables fast high volume data transfers or supports latency sensitive applications.
 
