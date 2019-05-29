@@ -4,3 +4,8 @@ The [Google Cloud CDN](https://cloud.google.com/cdn/docs/overview) content deliv
 
 * Compute Engine virtual machine (VM) instance groups.
 * Google Cloud Storage buckets.
+* Cache secure content using SSL/TLS for no additional charge
+* Stackdriver logging 
+* Serve all content from a single anycast IP address with low latency
+* Invalidation - take down cached content in minutes
+* Cache Keys - Each cache entry in a Cloud CDN cache is identified by a cache key
