@@ -17,5 +17,4 @@ There are a number of different storage options in the Google Cloud Platform.
 | Granularity     | Object         | Attribute       | Row                     | Field       | Field         |
 | Transaction     | No             | Yes             | No                      | Yes         | Yes           |
 | Complex Queries | No             | No              | No                      | Yes         | Yes           |
-| Good For        | Bin or Object  | App Engine      | Flat Heavey Read/Write  | Web/Apps,   | Scalable Apps |
-|                 |                |                 |                         | NoOps SQL DB|               |
+| Good For        | Bin or Object  | App Engine      | Flat Heavey Read/Write  | Web/Apps, NoOps SQL DB  | Scalable Apps |
