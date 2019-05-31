@@ -60,8 +60,5 @@ Following are the options for interconnecting with Google:
 | Carrier Peering | Peer thru Service Provider to Google's Public Network | Various based on Service Provider Offering | Service Provider | Exteranl IP Addresses |
 
 __Note:__ 
-
 Interconnect - Direct access to RFC1918 IP Addresses in your VPC with SLA.
-
-
 Peering - Access to Google public IP Addresses only without SLA. i.e. API, G-Suite
