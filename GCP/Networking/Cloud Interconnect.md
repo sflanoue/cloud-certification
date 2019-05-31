@@ -41,10 +41,14 @@ Following are the options for interconnecting with Google:
   * Private IP Support: False
   * Uses BGP with public AS numbers.
   * Connect directly to Google to save on egress fees.
+  * No SLA
+  * Reach all of Google Services
 * Carrier Peering:
   * Category: Transit
   * Private IP Support: False
   * Uses BGP with public AS numbers.
+  * No SLA
+  * Reach all of Google Services
   * If you do not meet the requirements for Direct Peering you can connect with a Carrier Peering partner.
 
 | Connection       | Provides                                              | Capacity                | Requirements   | Access Type |
@@ -52,3 +56,5 @@ Following are the options for interconnecting with Google:
 | IPSec VPN Tunnel | Encryption Tunnel to VPC Network thru public Internet | 1.5 to 3Mbps per tunnel | On-Prem VPN GW | Internal IP Addresses |
 | Dedicated Interconnect | Dedicated Direct connection to VPC Network | 10Gbps per link | Connection in Colo Facility | Internal IP Addresses |
 | Partner Interconnect | Dedicated BW connection to VPC Network thru a Service Provider | 50Mbps - 10Gbps per connection | Service Provider | Internal IP Addresses |
+| Direct Peering | Dedicated Direct connection to Google's Network | 10Gbps per link | Connection in GCP POP | Exteranl IP Addresses |
+| Carrier Peering | Peer thru Service Provider to Google's Public Network | Various based on Service Provider Offering | Service Provider | Exteranl IP Addresses |
