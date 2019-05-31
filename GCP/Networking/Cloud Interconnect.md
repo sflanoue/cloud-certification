@@ -58,3 +58,7 @@ Following are the options for interconnecting with Google:
 | Partner Interconnect | Dedicated BW connection to VPC Network thru a Service Provider | 50Mbps - 10Gbps per connection | Service Provider | Internal IP Addresses |
 | Direct Peering | Dedicated Direct connection to Google's Network | 10Gbps per link | Connection in GCP POP | Exteranl IP Addresses |
 | Carrier Peering | Peer thru Service Provider to Google's Public Network | Various based on Service Provider Offering | Service Provider | Exteranl IP Addresses |
+
+__Note:__ 
+Interconnect - Direct access to RFC1918 IP Addresses in your VPC with SLA.
+Peering - Access to Google public IP Addresses only without SLA. i.e. API, G-Suite
