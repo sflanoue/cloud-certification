@@ -7,8 +7,9 @@
 * 99.9% availability.
 * Site-to-site VPN (star topology).
 * Routing via static or dynamic routes using Cloud Router.
-* Supports IKE pre-shared keys.
+* Supports IKE V1 & V2 pre-shared keys.
 * Uses Encapsulated Security Payload (ESP) in tunnel mode with authentication.
+* Maximum MTU 1460 bytes
 
 __Note:__ ESP Authentication Headers (AH) or ESP in Transport mode are not supported.
 
@@ -21,4 +22,4 @@ __Note:__ ESP Authentication Headers (AH) or ESP in Transport mode are not suppo
 
 * When you have a dedicated client side VPN gateway.
 * Point-to-site VPN is not supported.
-* When you want to connect two different VPC networks.
+* Useful for low volume data connections
