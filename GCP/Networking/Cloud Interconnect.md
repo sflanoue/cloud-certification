@@ -27,6 +27,11 @@ Following are the options for interconnecting with Google:
   * Directly connect your on-premises network to your GCP VPC.
   * Require a common point-of-presence with Google.
   * Router requirements must be met.
+  * 99.9 or 99.99 SLA with Google
+* Partner Interconnect
+  * Category: Transit
+  * Private IP Support: True
+  * SLA is with the service provider
 * IPsec VPN:
   * Category: Transit
   * Private IP Support: True
@@ -41,3 +46,9 @@ Following are the options for interconnecting with Google:
   * Private IP Support: False
   * Uses BGP with public AS numbers.
   * If you do not meet the requirements for Direct Peering you can connect with a Carrier Peering partner.
+
+| Connection       | Provides                                              | Capacity                | Requirements   | Access Type |
+|------------------|-------------------------------------------------------|-------------------------|----------------|-------------|
+| IPSec VPN Tunnel | Encryption Tunnel to VPC Network thru public Internet | 1.5 to 3Mbps per tunnel | On-Prem VPN GW | Internal IP Addresses |
+| Dedicated Interconnect | Dedicated Direct connection to VPC Network | 10Gbps per link | Connection in Colo Facility | Internal IP Addresses |
+| Partner Interconnect | Dedicated BW connection to VPC Network thru a Service Provider | 50Mbps - 10Gbps per connection | Service Provider | Internal IP Addresses |
