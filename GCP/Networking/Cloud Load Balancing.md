@@ -2,14 +2,15 @@
 
 [Google Cloud Load Balancing](https://cloud.google.com/compute/docs/load-balancing/) can be used to load balance user requests among sets of instances.
 
-| Name      | Internet | Internal | Single Region | Multi-Region  |
-|-----------|----------|----------|---------------|---------------|
-| HTTP(S)   | Yes      | No       | Yes           | Yes           |
-| SSL Proxy | Yes      | No       | No            | Yes           |
-| TCP Proxy | Yes      | No       | No            | Yes           |
-| TCP LB    | Yes      | Yes      | Yes           | Use TCP Proxy |
-| UDP LB    | Yes      | Yes      | Yes           | No            |
+| Name             | Traffic Type | Global/Regional | External/Internal | External Ports for LB  |
+|------------------|--------------|-----------------|---------------|---------------|
+| HTTP(S)          | HTTP or HTTPS      | Global       | External           | HTTP on 80 or 8080; HTTPS on 443           |
+| SSL Proxy        | TCP w/ SSL offload | Global       | External            | 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1883, and 5222           |
+| TCP Proxy        | TCP without SSL offload. Does not preserve client IP addresses      | Global       | External            | 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1883, 5222           |
+| Network TCP/UDP  | TCP/UDP without SSL offload. Preserves client IP addresses.      | Regional      | External           | Any |
+| Internal TCP/UDP | TCP or UDP      | Regional      | Internal           | Any            |
 
+Deciding on a load balancer - [Load Balancer Flow Chart](https://cloud.google.com/load-balancing/images/choose-lb.svg)
 ## Features
 
 * Global external load balancing.
@@ -76,6 +77,14 @@
   * Automated server monitoring and restarts.
   * If health check sees a failed service, re-create the instance.
 * Balances instances across three zones in a region.
+
+## Network Endpoint Groups
+
+* Works with HTTP(S), TCP Proxy & SSL Proxy Load Balancers
+* NEGs are zonal resources
+* Provide a more granular distribution of traffic across applications or containers running within VM instances
+* Every endpoint IP address must be in the same subnet as the NEG
+* Only (RFC 1918) IPs can be added to a NEG
 
 ### Regional Managed Instance Groups Best Practices
 
