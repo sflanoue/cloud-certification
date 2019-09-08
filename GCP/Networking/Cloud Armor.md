@@ -8,6 +8,7 @@ The [Google Cloud Armor](https://cloud.google.com/armor) Protects your services 
 * Attach the policy to a Load Balancer backend in the Cloud Armor settings
 
 ## Limitations
+
 * Each project is limited to a max of 200 security rules
 * Each project is limited to a max of 10 cloud armor security policies
 * Each rule is limited to a max of 5 IP addresses or IP address ranges
